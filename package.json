@@ -1,0 +1,27 @@
+{
+  "name": "gea-aws4-extensions",
+  "version": "1.0.0",
+  "description": "GEA extensions to NPM library 'aws4'",
+  "main": "gea-aws4-extensions.js",
+  "scripts": {
+    "pretest": "git submodule update --init --recursive",
+    "test": "mocha test && NODE_PATH=`pwd` mocha -r gea-aws4-extensions aws4/test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.appl.ge.com/200017901/aws4"
+  },
+  "keywords": [
+    "AWS4",
+    "HMAC"
+  ],
+  "author": "clayton.brehm@geappliances.com",
+  "license": "ISC",
+  "dependencies": {
+    "aws4": "^1.6.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.0.5",
+    "request": "^2.85.0"
+  }
+}
