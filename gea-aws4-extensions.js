@@ -14,7 +14,7 @@ aws4.sign = function sign (request, credentials, ...options) {
   return signer.sign();
 }
 aws4.RequestSigner.prototype.prepareRequest = function prepareRequest() {
-  //aws4prepareRequest.apply(this);
+  aws4prepareRequest.apply(this);
   if (this.signeroptions.includes(module.exports.DoNotSignContentLength)
         && this.request && this.request.headers) {
           delete this.request.headers['Content-Length'];
